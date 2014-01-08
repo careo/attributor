@@ -55,12 +55,16 @@ module Attributor
     end
 
 
-    
     def describe(shallow=true)
-      { 
-        :type => self.type.describe(shallow)
-      }.merge!(options)
+      description = self.options.clone
+
+      if (reference = description.delete :reference)
+        description[:reference] = reference.name
+      end
+
+      description[:type] = self.type.describe(shallow)
     end
+
 
     def example(context=nil, parent=nil)
 
