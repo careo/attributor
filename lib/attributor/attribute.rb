@@ -63,6 +63,7 @@ module Attributor
       end
 
       description[:type] = self.type.describe(shallow)
+      description
     end
 
 
