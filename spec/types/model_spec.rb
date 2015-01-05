@@ -408,6 +408,11 @@ describe Attributor::Model do
 
   end
 
-
+  context 'loading with hash' do
+    it 'works' do
+      model = ModelWithHash.dump(nil)
+      p model
+    end
+  end
 
 end

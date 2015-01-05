@@ -317,7 +317,7 @@ module Attributor
       self.attributes.each_with_object({}) do |(name, value), result|
         attribute = self.class.attributes[name]
 
-        result[name.to_sym] = attribute.dump(value, context: context + [name] )
+        result[name.to_sym] = attribute.dump(value, context: context + [name])
       end
     ensure
       @dumping = false

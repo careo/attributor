@@ -81,3 +81,10 @@ class Address < Attributor::Model
 end
 
 
+class ModelWithHash < Attributor::Model
+  attributes do 
+    attribute :name, String
+    #attribute :hash, Attributor::Hash
+  end
+end
+

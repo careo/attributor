@@ -186,7 +186,7 @@ module Attributor
         if recurse
           loaded_value = {}
         else
-          loaded_value = {}
+          return nil
         end
       elsif value.is_a?(self)
         return value
